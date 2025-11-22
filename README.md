@@ -6,15 +6,19 @@ My personal development reference guide - everything I'm learning about coding, 
 **Goal:** Build foundation for using GitHub Copilot with repositories and creating prototypes
 
 ## Table of Contents
-- [Git Workflow](#git-workflow-step-by-step-process)
+- [Git Workflow](#git-workflow---step-by-step-process)
 - [Complete Cheat Sheet](#complete-cheat-sheet)
 - [Daily Practice Routine](#your-practice-routine)
+- [Backstage Setup](#backstage-local-setup)
 
 
-1. GIT WORKFLOW - STEP-BY-STEP PROCESS
-Practice this sequence repeatedly until it's automatic
-Initial Setup (One-time per project)
-bash# 1. Navigate to where you want your project
+## 1. 
+## GIT WORKFLOW - STEP-BY-STEP PROCESS
+*Practice this sequence repeatedly until it's automatic*
+
+### Initial Setup (One-time per project)
+```bash
+# 1. Navigate to where you want your project
 # MAC:
 cd ~/Documents/Projects
 # WINDOWS:
@@ -61,8 +65,11 @@ git remote add origin https://github.com/Vdave06/repository-name.git
 # MAC & WINDOWS (same):
 git push -u origin main
 # VS CODE: Click ... menu → Push
-Daily Workflow (Repeat this constantly)
-bash# 1. Start your work session - check where you are
+```
+
+### Daily Workflow (Repeat this constantly)
+```bash
+# 1. Start your work session - check where you are
 # MAC:
 pwd
 # WINDOWS:
@@ -140,7 +147,9 @@ git add filename.txt
 
 ## VS CODE METHOD:
 # Click the "+" next to each file in Source Control panel
-# Files move from "Changes" section to "Staged Changes" section
+# Files move from "
+
+Changes" section to "Staged Changes" section
 # OR click + next to "Changes" header to stage all
 
 # 6. Commit with meaningful message - CHOOSE YOUR METHOD
@@ -169,12 +178,13 @@ git push
 
 # 8. Verify on GitHub.com that changes appear
 # Open browser, go to your repository and check the changes are there
-# VS CODE: Source Control should now show no changes
 
-2. COMPLETE CHEAT SHEET
-TERMINAL/COMMAND LINE BASICS
-Navigation Commands
-bash# MAC:
+
+## 2. 
+## COMPLETE CHEAT SHEET, TERMINAL/COMMAND LINE BASICS, Navigation Commands
+bash# 
+
+MAC:
 pwd                 # Where am I? (Print Working Directory)
 # WINDOWS:
 cd                  # Where am I? (just cd by itself)
@@ -207,8 +217,11 @@ cd C:\Users\YourName\Documents  # Go to Documents folder
 clear               # Clear the terminal screen
 # WINDOWS:
 cls                 # Clear the terminal screen
-File & Folder Operations
-bash# MAC & WINDOWS (same):
+
+##File & Folder Operations
+bash#
+
+MAC & WINDOWS (same):
 mkdir folder-name   # Create new folder
 
 # MAC:
@@ -246,40 +259,66 @@ mv file1 file2      # Rename/move file
 # WINDOWS:
 move file1 file2    # Move file
 ren file1 file2     # Rename file
-GIT COMMANDS
-Good news - ALL Git commands are the same on Mac and Windows!
+
+##GIT COMMANDS - Good news - ALL Git commands are the same on Mac and Windows!
 Setup & Configuration
-bashgit --version               # Check Git is installed
+
+bash
+
+git --version               # Check Git is installed
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config --list          # View all settings
+
 Starting a Repository
-bashgit init                    # Initialize new repo
+
+bash
+
+git init                    # Initialize new repo
 git clone [url]             # Copy existing repo from GitHub
+
 Basic Workflow Commands
-bashgit status                  # What's changed? (USE CONSTANTLY!)
+
+bash
+git status                  # What's changed? (USE CONSTANTLY!)
 git add .                   # Stage all changes
 git add file.txt           # Stage specific file
 git commit -m "message"    # Save changes with message
 git push                   # Upload to GitHub
 git pull                   # Download latest from GitHub
+
 Viewing History
-bashgit log                    # View commit history
+
+bash
+
+git log                    # View commit history
 git log --oneline         # Compact history view
 git diff                  # See unstaged changes
 git diff --staged         # See staged changes
+
 Branches (For later)
-bashgit branch                # List branches
+
+bash
+
+git branch                # List branches
 git branch new-branch    # Create branch
 git checkout branch-name # Switch branches
 git merge branch-name    # Merge branch
+
 Fixing Mistakes
-bashgit restore file.txt      # Undo changes to file
+
+bash
+
+git restore file.txt      # Undo changes to file
 git restore --staged file # Unstage a file
 git reset HEAD~1         # Undo last commit (keep changes)
 git reset --hard HEAD~1  # Undo last commit (lose changes)
+
 Remote Repository (GitHub)
-bashgit remote -v                    # View remotes
+
+bash
+
+git remote -v                    # View remotes
 git remote add origin [url]      # Connect to GitHub
 git push -u origin main          # First push
 git push                         # Regular push
@@ -380,8 +419,13 @@ Number badges = Count of files in that state
 CHANGES section = Unstaged changes (need to git add)
 STAGED CHANGES section = Ready to commit (already git added)
 MERGE CHANGES section = Files with conflicts (during merge)
-Using Source Control Panel vs Terminal - SAME ACTIONS, DIFFERENT METHODS
-bash# TERMINAL COMMAND          # VS CODE EQUIVALENT
+
+
+## Using Source Control Panel vs Terminal - SAME ACTIONS, DIFFERENT METHODS
+
+bash
+
+# TERMINAL COMMAND          # VS CODE EQUIVALENT
 git status                  # Look at Source Control panel
 git add file.txt           # Click + next to file
 git add .                  # Click + next to "Changes" header
@@ -408,9 +452,12 @@ USE VS CODE SOURCE CONTROL WHEN:
 - Convenient clicking preferred
 
 BOTH ARE VALID - Use what feels natural!
-BACKSTAGE LOCAL SETUP
-Prerequisites Check
-bash# Check if Node.js is installed
+
+
+## BACKSTAGE LOCAL SETUP - Prerequisites Check
+
+bash
+# Check if Node.js is installed
 # MAC & WINDOWS (same):
 node --version
 # Should show v20.x.x or higher
@@ -446,8 +493,12 @@ https://github.com/backstage/backstage
 cd ~/Documents/backstage-master
 # WINDOWS:
 cd C:\Users\YourName\Documents\backstage-master
-Method 2: Clone with Git (Better for updates)
-bash# Navigate to Documents
+
+## Method 2: Clone with Git (Better for updates)
+
+bash
+
+# Navigate to Documents
 # MAC:
 cd ~/Documents
 # WINDOWS:
@@ -460,8 +511,11 @@ git clone https://github.com/backstage/backstage.git
 # Enter the folder
 # MAC & WINDOWS (same):
 cd backstage
-Install and Run Backstage
-bash# Step 1: Check you're in right folder
+
+## Install and Run Backstage
+
+bash 
+# Step 1: Check you're in right folder
 # MAC & WINDOWS (same):
 pwd                     # Shows current directory
 ls                      # Should show packages, plugins, README.md
@@ -485,8 +539,12 @@ yarn dev
 # Step 4: Stop Backstage
 # MAC & WINDOWS (same):
 Ctrl + C                # Stops the running server
-Understanding Backstage Files
-bash# Key files to recognize:
+
+## Understanding Backstage Files
+
+bash
+
+# Key files to recognize:
 package.json            # Node.js project file
 yarn.lock              # Locked dependency versions
 tsconfig.json          # TypeScript configuration
@@ -517,14 +575,20 @@ docs/                  # Documentation
 # MAC & WINDOWS (same):
 code --version         # Should show VS Code version
 code .                 # Opens current folder in VS Code
-COMMIT MESSAGE PATTERNS
-bash"Initial commit"
+
+
+## COMMIT MESSAGE PATTERNS
+
+bash 
+"Initial commit"
 "Add: new feature description"
 "Fix: bug description"
 "Update: what was changed"
 "Remove: what was deleted"
 "Refactor: what was reorganized"
-YOUR PRACTICE ROUTINE
+
+
+## YOUR PRACTICE ROUTINE
 Daily Drill (5-10 minutes)
 
 Open terminal
@@ -576,8 +640,10 @@ NEVER force push unless absolutely sure
 CHECK GitHub.com after pushing to verify
 REMEMBER Terminal and VS Code show the same Git info differently
 
-TROUBLESHOOTING QUICK FIXES
-bash# "Not a git repository" error
+## TROUBLESHOOTING QUICK FIXES
+
+bash
+# "Not a git repository" error
 git init
 
 # "No upstream branch" error  
@@ -618,52 +684,3 @@ git status  # Terminal is always the truth
 # VS Code 'code' command not found
 # MAC: Install via Command Palette
 # WINDOWS: Reinstall VS Code with PATH option
-
-Perfect, Vik! I've added the BACKSTAGE LOCAL SETUP section to your cheat sheet, keeping the exact same format. Now you have everything in one place: Git workflow, terminal commands, VS Code shortcuts, Source Control panel, and Backstage installation steps!RetryVcan I add this to github read me so I can keep it there and always update it?Absolutely, Vik! That's a brilliant idea - keeping your cheat sheet in a GitHub README means you can access it from anywhere and track changes over time. Let me show you how to do this:
-Steps to Add Your Cheat Sheet to GitHub
-Option 1: Add to Your Existing Repository (Recommended)
-bash# 1. Navigate to your existing repo
-# MAC:
-cd ~/Documents/Projects/my-first-repo
-# WINDOWS:
-cd C:\Users\YourName\Documents\Projects\my-first-repo
-
-# 2. Create or replace README.md with your cheat sheet
-# Copy all the cheat sheet content into README.md in VS Code
-
-# 3. Stage, commit, and push
-git add README.md
-git commit -m "Add: comprehensive development cheat sheet"
-git push
-Option 2: Create a New Repository Just for Your Learning Notes
-bash# 1. Create new folder
-# MAC:
-cd ~/Documents/Projects
-mkdir viks-dev-notes
-cd viks-dev-notes
-# WINDOWS:
-cd C:\Users\YourName\Documents\Projects
-mkdir viks-dev-notes
-cd viks-dev-notes
-
-# 2. Initialize Git
-git init
-
-# 3. Create README.md with your cheat sheet content
-# Open VS Code and paste all content
-code .
-
-# 4. Initial commit
-git add README.md
-git commit -m "Initial commit: development cheat sheet"
-
-# 5. Create repo on GitHub.com
-# - Go to github.com
-# - Click "New repository"
-# - Name it "viks-dev-notes" or "development-cheatsheet"
-# - DON'T initialize with README (you already have one)
-# - Click "Create repository"
-
-# 6. Link and push
-git remote add origin https://github.com/Vdave06/viks-dev-notes.git
-git push -u origin main
